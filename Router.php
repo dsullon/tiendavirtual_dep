@@ -17,7 +17,7 @@ class Router {
     public function comprobarRutas() {
         try {
             $urlActual = $_SERVER['PATH_INFO'] ?? '/';
-            $metodo = $_SERVER['REQUEST_METHOD']; // GET / POST
+            $metodo = $_SERVER['REQUEST_METHOD']; // GET / POSTS
             if($metodo == 'GET'){
                 $funcion = $this->getRoutes[$urlActual] ?? null;
             } else {

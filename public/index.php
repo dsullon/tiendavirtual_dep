@@ -9,6 +9,9 @@ require_once __DIR__ .'/../includes/app.php';
 
 $router = new Router();
 
+// API
+$router->post('/api/categorias', [CategoriaController::class, 'procesar']);
+
 // Acceso privado
 $router->get('/admin', [DashboardController::class, 'index']);
 $router->get("/admin/categorias", [CategoriaController::class, "admin"]);
